@@ -1,0 +1,34 @@
+name: native_restart
+description: A Flutter plugin to restart the Flutter Engine, allowing the Dart VM entry point to be re-executed while the native application continues running.
+version: 1.0.0
+homepage: https://github.com/tusharbhambere/native_restart
+repository: https://github.com/tusharbhambere/native_restart
+issue_tracker: https://github.com/tusharbhambere/native_restart/issues
+
+topics:
+  - restart
+  - flutter-plugin
+  - app-restart
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: io.native_restart
+        pluginClass: RestartPlugin
+      ios:
+        pluginClass: RestartPlugin
